@@ -18,22 +18,25 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  padding: 20px;
 }
 
 .container {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(3, 62, 110, 0.3);
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 h2 {
   text-align: center;
   margin: 0 0 20px;
+  font-size: 24px;
 }
 
 .form {
-  padding: 30px 40px;
+  padding: 20px;
 }
 
 .form-control {
@@ -46,6 +49,7 @@ h2 {
   display: block;
   color: #777;
   margin-bottom: 5px;
+  font-size: 14px;
 }
 
 .form-control input {
@@ -71,6 +75,7 @@ h2 {
   bottom: 0;
   left: 0;
   visibility: hidden;
+  font-size: 12px;
 }
 
 .form-control.error small {
@@ -79,13 +84,40 @@ h2 {
 
 .form button {
   cursor: pointer;
-  background-color: rgba(9,9,121,1) ;
+  background-color: rgba(9,9,121,1);
   width: 100%;
   border: 1px solid rgb(111, 189, 241);
-  padding: 10px 0;
+  padding: 12px 0;
   border-radius: 5px;
-  box-shadow: 15px 15px 30px 10px rgba(245, 246, 247, 0.3);
+  box-shadow: 5px 5px 15px 5px rgba(245, 246, 247, 0.3);
   font-size: 16px;
   color: #fff;
   display: block;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  .form-control input {
+    font-size: 16px;
+  }
+
+  .form button {
+    font-size: 18px;
+    padding: 15px 0;
+  }
 }
